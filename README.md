@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=900&color=22D3EE&center=true&vCenter=true&width=500&lines=Curioso+por+natureza.;Transformando+ideias+em+c%C3%B3digo.;Um+commit+por+vez." alt="typing"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=900&color=FF7A00&center=true&vCenter=true&width=500&lines=Curioso+por+natureza.;Transformando+ideias+em+c%C3%B3digo.;Um+commit+por+vez." alt="typing"/>
 </p>
 
 <img src="./assets/title-stack.svg" width="100%" alt="stack"/>
@@ -18,7 +18,7 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TheLipe1&theme=github_dark" height="160" alt="linguagens"/>
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=TheLipe1&locale=pt_BR&background=135,0D1117,1A1F3A&border=00000000&stroke=3B82F6&ring=A855F7&fire=22D3EE&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E" width="100%" alt="streak"/>
+  <img src="https://streak-stats.demolab.com?user=TheLipe1&locale=pt_BR&background=135,0D1117,2A1408&border=00000000&stroke=FF7A00&ring=FF3D00&fire=FFB800&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF7A00&sideLabels=C9D1D9&dates=8B949E" width="100%" alt="streak"/>
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/TheLipe1/TheLipe1/output/github-snake-dark.svg" width="100%" alt="snake"/>
