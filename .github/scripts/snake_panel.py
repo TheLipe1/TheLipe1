@@ -81,6 +81,13 @@ def restyle_snake(src):
     src = re.sub(r'<rect class="u[^"]*"[^>]*/>', "", src)
     # round cells -> star-like dots
     src = re.sub(r'(<rect class="c[^"]*"[^>]*?) rx="[\d.]+" ry="[\d.]+"', r'\1 rx="6" ry="6"', src)
+    # complete the grid: fill days that don't exist yet (current/first week) with empty dots
+    cells = {(float(x), float(y)) for x, y in re.findall(r'<rect class="c[^"]*" x="([\d.]+)" y="([\d.]+)"', src)}
+    if cells:
+        xs, ys = sorted({x for x, _ in cells}), sorted({y for _, y in cells})
+        filler = "".join(f'<rect class="c" x="{x:g}" y="{y:g}" rx="6" ry="6"/>'
+                         for x in xs for y in ys if (x, y) not in cells)
+        src = src.replace('<rect class="s s0"', filler + '<rect class="s s0"', 1)
     # gradient snake (head cyan -> tail pink) with glow
     segs = re.findall(r'<rect class="s s(\d+)"', src)
     n = max(len(segs) - 1, 1)
