@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="Hello World — TheLipe"/>
+  <img src="./assets/hero.svg" width="100%" alt="Hello World — TheLipe"/>
 </p>
 
 <p align="center">
@@ -12,17 +12,8 @@
 <img src="./assets/title-projetos.svg" width="100%" alt="02 Projetos"/>
 <a href="https://github.com/TheLipe1/TheAgent"><img src="./assets/projeto-theagent.svg" width="100%" alt="TheAgent — Agente de IA para testes"/></a>
 
-<img src="./assets/title-stats.svg" width="100%" alt="03 Stats"/>
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TheLipe1&theme=github_dark" height="160" alt="stats"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TheLipe1&theme=github_dark" height="160" alt="linguagens"/>
-</p>
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=TheLipe1&locale=pt_BR&background=135,070812,1E1048&border=00000000&stroke=8B5CF6&ring=8B5CF6&fire=F472B6&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B93A7" width="100%" alt="streak"/>
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TheLipe1/TheLipe1/output/github-snake-dark.svg" width="100%" alt="snake"/>
-</p>
+<img src="./assets/title-status.svg" width="100%" alt="03 Status"/>
+<img src="./assets/status.svg" width="100%" alt="Missão atual: aprender Python · Base: PHP, JavaScript, SQL · Próximo destino: Inteligência Artificial"/>
 
 <img src="./assets/title-contato.svg" width="100%" alt="04 Contato"/>
 <p align="center">
