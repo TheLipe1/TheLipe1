@@ -186,7 +186,7 @@ def build(grid):
         f'<circle cx="{x}" cy="16" r="1.4" fill="{C1}">'
         f'<animate attributeName="cy" values="16;34" dur=".7s" begin="{i * .23:.2f}s" repeatCount="indefinite"/>'
         f'<animate attributeName="opacity" values=".9;0" dur=".7s" begin="{i * .23:.2f}s" repeatCount="indefinite"/></circle>'
-        for i, x in enumerate([-4, 4, 0]))
+        for i, x in enumerate([-4, 4]))
 
     ship = f'''
 <g>
