@@ -17,7 +17,7 @@ C1, C2, C3 = "#22d3ee", "#8b5cf6", "#f472b6"
 LEVEL_COLORS = {1: "#7c3aed", 2: "#8b5cf6", 3: C1, 4: C3}
 EMPTY = "#23264a"
 MONO = "'Cascadia Code','Fira Code',Consolas,'Courier New',monospace"
-PAD, W, H, CUT = 12, 1000, 270, 26
+PAD, PADY, W, H, CUT = 12, 7, 1000, 270, 26
 COLS, ROWS, STEP, R = 53, 7, 15, 4.6
 GX0 = (W - (COLS - 1) * STEP) / 2
 GY0 = 82
@@ -194,7 +194,6 @@ def build(grid):
     keyTimes="0;{SWEEP};1" dur="{T}s" repeatCount="indefinite"/>
   <g>
     <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="1.2s" repeatCount="indefinite"/>
-    <circle cy="2" r="26" fill="{C2}" opacity=".28" filter="url(#sg)"/>
     {exhaust}{flame(-4)}{flame(4)}
     <!-- asas -->
     <path d="M5 -2 L22 9 L23 16 L6 12Z" fill="url(#wing)" stroke="#ffffff" stroke-opacity=".45" stroke-width=".8" stroke-linejoin="round"/>
@@ -239,9 +238,9 @@ def build(grid):
             + '<filter id="pblur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="40"/></filter>'
             + '<filter id="sg" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>'
             + '<filter id="eg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>')
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W + 2 * PAD}" height="{H + 2 * PAD}" '
-            f'viewBox="0 0 {W + 2 * PAD} {H + 2 * PAD}" fill="none"><defs>{defs}</defs>'
-            f'<g transform="translate({PAD} {PAD})">{body}</g></svg>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W + 2 * PAD}" height="{H + 2 * PADY}" '
+            f'viewBox="0 0 {W + 2 * PAD} {H + 2 * PADY}" fill="none"><defs>{defs}</defs>'
+            f'<g transform="translate({PAD} {PADY})">{body}</g></svg>')
 
 
 def main():
