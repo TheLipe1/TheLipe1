@@ -95,9 +95,11 @@ def restyle_snake(src):
         i = int(m.group(1))
         return f'<rect style="fill:{ramp(i / n)};filter:url(#psg)" class="s s{i}"'
     src = re.sub(r'<rect class="s s(\d+)"', paint, src)
-    # crop away the bar area and place inside the panel
+    # keep the snake on the grid: it normally parks on an empty lane above the first row
+    src = re.sub(r"translate\((-?[\d.]+)px,-16px\)", r"translate(\1px,0px)", src)
+    # crop away the empty lane and the bar area, then place inside the panel
     src = re.sub(r'<svg viewBox="[^"]*" width="[^"]*" height="[^"]*"',
-                 '<svg viewBox="-16 -24 880 152" x="60" y="72" width="880" height="152"', src, count=1)
+                 '<svg viewBox="-16 -12 880 136" x="60" y="82" width="880" height="136"', src, count=1)
     src = re.sub(r"<desc>.*?</desc>", "", src)
     return src
 
