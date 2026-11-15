@@ -27,8 +27,6 @@
 </g>
 <rect x="1" y="1" width="998" height="338" rx="24" stroke="url(#gb)" stroke-opacity=".55" stroke-width="1.5"/>
 
-<text x="72" y="118" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="14" letter-spacing="5" fill="#22d3ee">HELLO, UNIVERSE</text>
-<text x="68" y="196" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="86" font-weight="800" letter-spacing="-2" fill="url(#gt)">TheLipe</text>
-<text x="72" y="240" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="24" fill="#e6edf3">Apaixonado por tecnologia</text>
-<text x="72" y="276" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="15" fill="#8b93a7">explorando o universo do código<tspan fill="#f472b6">_<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+<text x="74" y="138" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="16" letter-spacing="6" fill="#22d3ee">HELLO WORLD</text>
+<text x="68" y="222" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="96" font-weight="800" letter-spacing="-2" fill="url(#gt)">TheLipe</text>
 </svg>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="TheLipe — Apaixonado por tecnologia"/>
+  <img src="./assets/header.svg" width="100%" alt="Hello World — TheLipe"/>
 </p>
 
 <p align="center">
