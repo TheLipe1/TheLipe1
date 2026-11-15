@@ -13,7 +13,7 @@
 <a href="https://github.com/TheLipe1/TheAgent"><img src="./assets/projeto-theagent.svg" width="100%" alt="TheAgent — Agente de IA para testes"/></a>
 
 <img src="./assets/title-status.svg" width="100%" alt="03 Status"/>
-<img src="./assets/status.svg" width="100%" alt="Missão atual: aprender Python · Base: PHP, JavaScript, SQL · Próximo destino: Inteligência Artificial"/>
+<img src="./assets/status.svg" width="100%" alt="Missão atual: evoluir no Python e explorar IA · PHP, JavaScript e SQL: intermediário · Python: aprendendo"/>
 
 <img src="./assets/title-contato.svg" width="100%" alt="04 Contato"/>
 <p align="center">
