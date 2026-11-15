@@ -6,9 +6,9 @@
   <rect width="628" height="220" fill="url(#scan)" opacity=".5"/>
 </g>
 <path d="M27 1 L627 1 L627 193 L601 219 L1 219 L1 27Z" stroke="url(#gb)" stroke-opacity=".75" stroke-width="1.5" stroke-linejoin="round"/>
-<line x1="27" y1="1" x2="1" y2="27" stroke="url(#gb)" stroke-width="6" stroke-linecap="round" filter="url(#eg)" opacity=".9"><animate attributeName="opacity" values=".9;.4;.9" dur="3s" repeatCount="indefinite"/></line><line x1="27" y1="1" x2="1" y2="27" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/><line x1="627" y1="193" x2="601" y2="219" stroke="url(#gb)" stroke-width="6" stroke-linecap="round" filter="url(#eg)" opacity=".9"><animate attributeName="opacity" values=".9;.4;.9" dur="3s" repeatCount="indefinite"/></line><line x1="627" y1="193" x2="601" y2="219" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="627" y1="193" x2="601" y2="219" stroke="url(#gb)" stroke-width="6" stroke-linecap="round" filter="url(#eg)" opacity=".9"><animate attributeName="opacity" values=".9;.4;.9" dur="3s" repeatCount="indefinite"/></line><line x1="627" y1="193" x2="601" y2="219" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/><line x1="27" y1="1" x2="1" y2="27" stroke="url(#gb)" stroke-width="6" stroke-linecap="round" filter="url(#eg)" opacity=".9"><animate attributeName="opacity" values=".9;.4;.9" dur="3s" repeatCount="indefinite"/></line><line x1="27" y1="1" x2="1" y2="27" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
 <text x="30" y="44" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="13" font-weight="700" fill="#ffffff" fill-opacity=".55">03</text>
-<text x="58" y="44" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="13" letter-spacing="4" fill="#ffffff">PROJETO</text>
+<text x="58" y="44" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="13" letter-spacing="4" fill="#ffffff">PROJECT</text>
 <rect x="30" y="54" width="22" height="2" fill="url(#gb)"/>
 <rect x="566" y="32" width="3" height="14" rx="1.5" fill="#ffffff" opacity=".55"><animate attributeName="height" values="14;14;4;7;5;14" dur="1.6s" repeatCount="indefinite"/><animate attributeName="y" values="32;32;42;39;41;32" dur="1.6s" repeatCount="indefinite"/></rect><rect x="572" y="32" width="3" height="14" rx="1.5" fill="#ffffff" opacity=".55"><animate attributeName="height" values="7;7;10;10;12;7" dur="1.8s" repeatCount="indefinite"/><animate attributeName="y" values="39;39;36;36;34;39" dur="1.8s" repeatCount="indefinite"/></rect><rect x="578" y="32" width="3" height="14" rx="1.5" fill="#ffffff" opacity=".55"><animate attributeName="height" values="10;12;10;12;14;10" dur="2.0s" repeatCount="indefinite"/><animate attributeName="y" values="36;34;36;34;32;36" dur="2.0s" repeatCount="indefinite"/></rect><rect x="584" y="32" width="3" height="14" rx="1.5" fill="#ffffff" opacity=".55"><animate attributeName="height" values="12;7;14;4;12;12" dur="2.2s" repeatCount="indefinite"/><animate attributeName="y" values="34;39;32;42;34;34" dur="2.2s" repeatCount="indefinite"/></rect><rect x="590" y="32" width="3" height="14" rx="1.5" fill="#ffffff" opacity=".55"><animate attributeName="height" values="7;4;10;5;14;7" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="39;42;36;41;32;39" dur="2.4s" repeatCount="indefinite"/></rect>
 
@@ -27,10 +27,10 @@
   </g>
 </g>
 <text x="214" y="118" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="800" fill="#ffffff">TheAgent</text>
-<text x="216" y="148" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="16" fill="#ffffff" fill-opacity=".75">Agente de IA para testes</text>
+<text x="216" y="148" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="16" fill="#ffffff" fill-opacity=".75">AI agent for testing</text>
 <path d="M216 168 h80 l8 13 l-8 13 h-80 l-8 -13Z" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".15"/>
 <circle cx="226" cy="181" r="5" fill="#3572A5"/>
 <text x="238" y="186" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="12" fill="#ffffff">Python</text>
-<text x="566" y="186" text-anchor="end" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="12" letter-spacing="2" fill="#ffffff">VER REPOSITÓRIO</text>
+<text x="566" y="186" text-anchor="end" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="12" letter-spacing="2" fill="#ffffff">VIEW REPOSITORY</text>
 <text x="588" y="187" text-anchor="end" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="16" fill="#ffffff">→<animateTransform attributeName="transform" type="translate" values="0 0;5 0;0 0" dur="1.5s" repeatCount="indefinite"/></text>
 </g></svg>

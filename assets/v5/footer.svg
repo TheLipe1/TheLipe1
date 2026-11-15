@@ -6,5 +6,5 @@
   <ellipse cx="500" cy="470" rx="760" ry="360" fill="#8b5cf6" opacity=".45" filter="url(#hg)">
     <animate attributeName="opacity" values=".3;.55;.3" dur="6s" repeatCount="indefinite"/></ellipse>
   <ellipse cx="500" cy="470" rx="740" ry="350" fill="url(#hz)" stroke="url(#gb)" stroke-width="2"/>
-  <text x="500" y="70" text-anchor="middle" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="13" letter-spacing="5" fill="#d5d9e6">OBRIGADO PELA VISITA</text>
+  <text x="500" y="70" text-anchor="middle" font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace" font-size="13" letter-spacing="5" fill="#d5d9e6">THANKS FOR VISITING</text>
 </g></g></svg>
