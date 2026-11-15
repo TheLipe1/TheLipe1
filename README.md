@@ -11,7 +11,7 @@
 <p align="center"><a href="https://github.com/TheLipe1/TheAgent"><img src="./assets/v5/project.svg" width="63.6%" alt="Project: TheAgent — AI agent for testing"/></a><a href="mailto:felipea2800@gmail.com"><img src="./assets/v5/contact.svg" width="36.3%" alt="Contact: send an email"/></a></p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheLipe1/TheLipe1/output/github-snake-dark.svg" width="96%" alt="Snake eating contributions"/>
+  <img src="https://raw.githubusercontent.com/TheLipe1/TheLipe1/output/snake-panel.svg" width="100%" alt="Activity: snake eating contributions"/>
 </p>
 
 <!-- Extra social buttons (replace SEU-USUARIO / SEU-ID and uncomment):
