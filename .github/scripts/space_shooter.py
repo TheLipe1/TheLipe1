@@ -158,6 +158,10 @@ def build(grid):
                       + anim("y", f"{SHIP_Y - 18};{SHIP_Y - 18};{cy - 6:g};{cy - 6:g}", times(0, fire, hit, 1))
                       + anim("opacity", "0;0;1;1;0;0", times(0, fire, fire + .002, hit, hit + .002, 1))
                       + "</rect>")
+            shots += (f'<circle cx="{cx:g}" cy="{SHIP_Y - 24}" r="0" fill="#ffffff" opacity="0">'
+                      + anim("r", "0;0;6;0;0", times(0, fire, fire + .004, fire + .012, 1))
+                      + anim("opacity", "0;0;1;0;0", times(0, fire, fire + .002, fire + .012, 1))
+                      + "</circle>")
             # explosion: flash ring + particles
             booms += (f'<circle cx="{cx:g}" cy="{cy:g}" r="2" fill="none" stroke="#ffffff" stroke-width="2" opacity="0">'
                       + anim("r", "2;2;14;14", times(0, hit, hit + .03, 1))
@@ -173,20 +177,42 @@ def build(grid):
                           + anim("opacity", "0;0;1;0;0", times(0, hit, hit + .003, hit + .04, 1))
                           + "</circle>")
 
+    def flame(x):
+        return (f'<path d="M{x - 2.6} 13 L{x} 22 L{x + 2.6} 13Z" fill="{C1}" opacity=".95">'
+                f'<animate attributeName="d" values="M{x - 2.6} 13 L{x} 22 L{x + 2.6} 13Z;M{x - 2.2} 13 L{x} 29 L{x + 2.2} 13Z;M{x - 2.6} 13 L{x} 22 L{x + 2.6} 13Z" dur=".22s" repeatCount="indefinite"/></path>'
+                f'<path d="M{x - 1.2} 13 L{x} 18 L{x + 1.2} 13Z" fill="#ffffff"/>')
+
+    exhaust = "".join(
+        f'<circle cx="{x}" cy="16" r="1.4" fill="{C1}">'
+        f'<animate attributeName="cy" values="16;34" dur=".7s" begin="{i * .23:.2f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values=".9;0" dur=".7s" begin="{i * .23:.2f}s" repeatCount="indefinite"/></circle>'
+        for i, x in enumerate([-4, 4, 0]))
+
     ship = f'''
 <g>
   <animateTransform attributeName="transform" type="translate" values="{xs_ship:g} {SHIP_Y};{xe_ship:g} {SHIP_Y};{xs_ship:g} {SHIP_Y}"
     keyTimes="0;{SWEEP};1" dur="{T}s" repeatCount="indefinite"/>
   <g>
     <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="1.2s" repeatCount="indefinite"/>
-    <path d="M0 10 L-5 22 L5 22Z" fill="{C1}" opacity=".9">
-      <animate attributeName="d" values="M0 10 L-5 22 L5 22Z;M0 10 L-4 28 L4 28Z;M0 10 L-5 22 L5 22Z" dur=".25s" repeatCount="indefinite"/>
-    </path>
-    <path d="M0 10 L-2.5 18 L2.5 18Z" fill="#ffffff"/>
-    <circle r="22" fill="{C2}" opacity=".25" filter="url(#sg)"/>
-    <path d="M0 -16 L6 -4 L16 6 L16 12 L5 9 L0 13 L-5 9 L-16 12 L-16 6 L-6 -4Z" fill="url(#ship)" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
-    <path d="M0 -9 L3 -1 L0 2 L-3 -1Z" fill="#ffffff" opacity=".9"/>
-    <rect x="-17" y="2" width="2" height="9" rx="1" fill="{C3}"/><rect x="15" y="2" width="2" height="9" rx="1" fill="{C3}"/>
+    <circle cy="2" r="26" fill="{C2}" opacity=".28" filter="url(#sg)"/>
+    {exhaust}{flame(-4)}{flame(4)}
+    <!-- asas -->
+    <path d="M5 -2 L22 9 L23 16 L6 12Z" fill="url(#wing)" stroke="#ffffff" stroke-opacity=".45" stroke-width=".8" stroke-linejoin="round"/>
+    <path d="M-5 -2 L-22 9 L-23 16 L-6 12Z" fill="url(#wing)" stroke="#ffffff" stroke-opacity=".45" stroke-width=".8" stroke-linejoin="round"/>
+    <path d="M9 4 L19 11 M-9 4 L-19 11" stroke="#ffffff" stroke-opacity=".35" stroke-width=".8"/>
+    <!-- canhões e luzes nas pontas -->
+    <rect x="21.5" y="2" width="2" height="9" rx="1" fill="#e6e9f2"/><rect x="-23.5" y="2" width="2" height="9" rx="1" fill="#e6e9f2"/>
+    <circle cx="23" cy="16.5" r="1.8" fill="{C3}"><animate attributeName="opacity" values="1;.15;1" dur="1s" repeatCount="indefinite"/></circle>
+    <circle cx="-23" cy="16.5" r="1.8" fill="{C1}"><animate attributeName="opacity" values=".15;1;.15" dur="1s" repeatCount="indefinite"/></circle>
+    <!-- motores -->
+    <rect x="-6.5" y="8" width="5" height="6" rx="1.5" fill="#1e1b4b" stroke="url(#ship)" stroke-width="1"/>
+    <rect x="1.5" y="8" width="5" height="6" rx="1.5" fill="#1e1b4b" stroke="url(#ship)" stroke-width="1"/>
+    <!-- fuselagem -->
+    <path d="M0 -22 C4 -16 6.5 -8 6.5 1 L6.5 11 L-6.5 11 L-6.5 1 C-6.5 -8 -4 -16 0 -22Z" fill="url(#ship)" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+    <path d="M0 -15 V9" stroke="#ffffff" stroke-opacity=".25" stroke-width=".8"/>
+    <!-- cabine -->
+    <ellipse cx="0" cy="-7" rx="3.2" ry="6.5" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".8" stroke-width=".7"/>
+    <ellipse cx="-1" cy="-9.5" rx="1" ry="2.2" fill="#ffffff" opacity=".85"/>
   </g>
 </g>'''
 
@@ -206,6 +232,8 @@ def build(grid):
 {eq_bars(W - 62, 46)}'''
     defs = (grad("gb")
             + f'<linearGradient id="ship" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{C1}"/><stop offset=".6" stop-color="{C2}"/><stop offset="1" stop-color="{C3}"/></linearGradient>'
+            + f'<linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{C2}"/><stop offset="1" stop-color="{C3}"/></linearGradient>'
+            + '<radialGradient id="glass" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#a5f3fc"/><stop offset="1" stop-color="#0e7490"/></radialGradient>'
             + f'<linearGradient id="laser" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="{C1}" stop-opacity="0"/></linearGradient>'
             + f'<clipPath id="pclip"><path d="{chamfer(W, H, CUT, cut)}"/></clipPath>'
             + '<filter id="pblur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="40"/></filter>'
